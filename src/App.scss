@@ -1,0 +1,21 @@
+$primary: #9E320F;
+$secondary: #f47308;
+$dark: #000;
+$nav-color: rgb(23 26 29);
+
+nav.bg-dark {
+	background-color: $nav-color !important;
+}
+
+.secondary-text {
+	color: $secondary
+}
+
+button.btn-dark {
+	background-color: $secondary;
+	border-color: $secondary;
+}
+
+.primary-text {
+	color: $primary;
+}

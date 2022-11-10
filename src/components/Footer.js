@@ -22,7 +22,7 @@ export default function Footer() {
 			    </p>
 		    </section>
 		  </div>
-		  <div className="text-center" style={{"backgroundColor": "rgba(0, 0, 0, 0.2)"}}>
+		  <div className="text-center" style={{"backgroundColor": "rgba(0, 0, 0, 0.3)"}}>
 		    © {currentYear} Copyright
 		  </div>
 		</footer>

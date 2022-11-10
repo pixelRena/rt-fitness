@@ -1,6 +1,6 @@
 export default function NavBar() {
 	return(
-		<nav className="navbar navbar-dark navbar-expand-lg bg-dark" style={{padding: "unset"}}>
+		<nav className="navbar navbar-dark sticky-top text-white navbar-expand-lg bg-dark" style={{padding: "unset"}}>
 			<div className="container-fluid">
 				<a className="navbar-brand" href="#">
 					<img src="logo.png" width="60"/>
