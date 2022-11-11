@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 
 const currentYear = new Date().getFullYear();
 
 export default function Footer() {
+
 	return(
 		<footer className="bg-dark text-center text-white">
 		  <div className="container p-4">
@@ -18,7 +20,7 @@ export default function Footer() {
 		    </section>
 		    <section>
 		    	<p>
-			    	<u role="button">Privacy Policy</u> | <u role="button">About RTF</u>
+			    	<u role="button">Privacy Policy</u> | <Link className="link-color" to="/about"><u role="button">About RTF</u></Link>
 			    </p>
 		    </section>
 		  </div>

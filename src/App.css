@@ -22,7 +22,7 @@ hr.line {
 
 .hero {
 	margin-top: 200px;
-	margin-bottom: 250px;
+	margin-bottom: 270px;
 }
 
 .overlay {	
@@ -53,6 +53,16 @@ video {
 	border-radius: 50%;
 	object-fit: cover;
 	box-shadow: 5px 5px 10px grey;
+}
+
+.link-color {
+	text-decoration: none !important;
+	color: #fff;
+}
+
+.link-color:hover {
+	text-decoration: none !important;
+	color: #c5c5c5 !important;
 }
 
 @media screen and (max-width: 768px){

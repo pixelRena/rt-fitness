@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
+// Adjust video for mobile
 export default function LandingPage(){
 	const [ muted, setMuted ] = useState(0);
 	const soundButton = useRef(null);
@@ -23,13 +25,13 @@ export default function LandingPage(){
 					onClick={handleSound}
 					ref={soundButton}/>
 			<div className="overlay"></div>
-			<video autoPlay loop muted={muted == 0} /*src="/videos/RTF_Intro.mov"*/ type="video/mp4"/>
+			<video autoPlay loop muted={muted == 0} src="/videos/RTF_Intro.mov" type="video/mp4"/>
 			<section className="hero text-uppercase text-white text-center p-3">
 				<h1 className="fw-bolder">Introducing <span className="secondary-text">Redemption Temple Fitness</span></h1>
 				<h3>Premium Personal Training</h3>
 				<h5 className="fw-lighter">It's <em className="secondary-text">never</em> too late</h5>
 				<hr className="line mb-3"/>
-				<button className="btn btn-dark btn-sm text-uppercase p-3 rounded-0">Apply Now</button>
+				<Link to="/apply-now"><button className="btn btn-dark btn-sm text-uppercase p-3 rounded-0">Apply Now</button></Link>
 			</section>
 		</div>
 	);
