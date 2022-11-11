@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;1,600&display=swap');
+
 body {
 	font-family: "Montserrat", sans-serif !important;
+	min-height: 100vh;
+}
+
+.app {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 hr.line {
@@ -38,15 +47,19 @@ video {
 	z-index: -99;
 }
 
-footer {
-	position: relative;
-	bottom: 0;
-	width: 100%;
-	line-height: 50px;
+.about div:nth-child(1) img {
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 5px 5px 10px grey;
 }
 
 @media screen and (max-width: 768px){
 	.hero {
 		margin-bottom: 200px;
+	}
+	.about div:nth-child(2) {
+		margin-top: 40px;
 	}
 }
