@@ -3,6 +3,7 @@ import './App.scss';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
 import About from './pages/About';
@@ -18,6 +19,7 @@ function App() {
         <div className="wrapper">
           <Navbar/>
           <ToastContainer position="top-center" limit={1} theme="dark"/>
+          <ScrollToTop/>
           <Routes>
             <Route index element={<LandingPage/>}/>
             <Route path="/about" element={<About/>}/>
