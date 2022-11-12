@@ -6,7 +6,6 @@ import StepTwo from '../components/StepTwo';
 import StepThree from '../components/StepThree';
 
 //  Add button pos's for all devices
-// Enable step button clicks
 // Develop mail implementation
 export default function ApplyForm() {
 	const navigate = useNavigate();
@@ -26,6 +25,11 @@ export default function ApplyForm() {
 	const [ ready, setReady ] = useState("");
 	// current step
 	const [ step, setStep ] = useState(1);
+
+	// Check if user can go to next steps by clicking on progressbar
+	const [ validateOne, setValidateOne ] = useState(0);
+	const [ validateTwo, setValidateTwo ] = useState(0);
+	const [ validateThree, setValidateThree ] = useState(0);
 
 	const progressState = useRef(null);
 	const progressVisibility = useRef(null);
@@ -73,6 +77,8 @@ export default function ApplyForm() {
 					setTimeout(() => xpStyle.style.backgroundColor = "unset",1000);
 				} else {
 					setStep(num);
+					setValidateOne(1);
+					setValidateTwo(1);
 				}
 			} else if(num === 3) {
 				if(!goal || (goal === "Other" && !otherGoal)) {
@@ -94,6 +100,7 @@ export default function ApplyForm() {
 					setTimeout(() => goalTypeStyle.style.backgroundColor = "unset",1000);
 				} else {
 					setStep(num);
+					setValidateThree(1);
 				}
 			} else {
 				if(!email) {
@@ -163,9 +170,18 @@ export default function ApplyForm() {
 				<div className="progress" style={{"height": "1px"}}>
 				<div className="progress-bar" role="progressbar" ref={progressState} style={{"backgroundColor":"#f47308", "width": "50%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
 				</div>
-				<button type="button" className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-dark rounded-pill" style={{width: "2rem", height:"2rem"}}>1</button>
-				<button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-dark rounded-pill" style={{width: "2rem", height:"2rem"}}>2</button>
-				<button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-dark rounded-pill" style={{width: "2rem", height:"2rem"}}>3</button>
+				<button type="button" disabled={!validateOne} 
+				className="position-absolute top-0 start-0 translate-middle btn btn-sm btn-dark rounded-pill" 
+				style={{width: "2rem", height:"2rem"}}
+				onClick={() => changeStep(1)}>1</button>
+				<button type="button" disabled={!validateTwo} 
+				class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-dark rounded-pill" 
+				style={{width: "2rem", height:"2rem"}}
+				onClick={() => changeStep(2)}>2</button>
+				<button type="button" disabled={!validateThree} 
+				class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-dark rounded-pill" 
+				style={{width: "2rem", height:"2rem"}}
+				onClick={() => changeStep(3)}>3</button>
 			</div>
 			<div className="d-flex justify-content-center h-75">
 				<div className={`w-75 ${step === 1 ? '':'d-none'}`} >
