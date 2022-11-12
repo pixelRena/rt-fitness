@@ -2,11 +2,10 @@
 
 body {
 	font-family: "Montserrat", sans-serif !important;
-	min-height: 100vh;
 }
 
 .app {
-	min-height: 130vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -66,6 +65,14 @@ video {
 	box-shadow: 5px 5px 10px grey;
 }
 
+.about {
+	margin-top: 150px;
+}
+
+.h-100vh {
+	height: 100vh;
+}
+
 .contact img {
 	height: 300px;
 	width: 300px;
@@ -96,7 +103,20 @@ a:hover {
 	.hero {
 		margin-bottom: 200px;
 	}
+	.about {
+		margin-top:200px;
+	}
 	.about div:nth-child(2) {
 		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.about div:nth-child(1) img {
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: 5px 5px 10px grey;
 	}
 }

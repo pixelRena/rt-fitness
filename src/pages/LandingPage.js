@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 // Adjust video for mobile/zooming in
@@ -7,7 +7,7 @@ export default function LandingPage(){
 	const soundButton = useRef(null);
 
 	function handleSound() {
-		if(muted == 0) {
+		if(muted === 0) {
 			setMuted(1);
 			soundButton.current.classList.remove("bi-volume-mute");
 			soundButton.current.classList.add("bi-volume-up");
@@ -25,7 +25,7 @@ export default function LandingPage(){
 					onClick={handleSound}
 					ref={soundButton}/>
 			<div className="overlay"></div>
-			<video autoPlay loop muted={muted == 0} src="/videos/RTF_Intro.mov" type="video/mp4"/>
+			<video autoPlay loop muted={muted === 0} src="/videos/RTF_Intro.mov" type="video/mp4"/>
 			<section className="hero text-uppercase text-white text-center p-3">
 				<h1 className="fw-bolder">Introducing <span className="secondary-text">Redemption Temple Fitness</span></h1>
 				<h3>Premium Personal Training</h3>

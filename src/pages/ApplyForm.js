@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 //  Add button pos's for all devices
+// Reorganize to different components
 // Enable step button clicks
 // Develop mail implementation
 const StepOne = ({setName,setLocation,setXP,setSex,name,location,sex,xp}) => {
@@ -197,7 +198,6 @@ export default function ApplyForm() {
 			setStep(num);
 		}
 	};
-
 
 	const handleApplication = (e) => {
 		e.preventDefault();
