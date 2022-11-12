@@ -36,7 +36,7 @@ hr.line {
 }
 
 .overlay {	
-	position: absolute;
+	position: fixed;
 	top: 0;
 	background-color: rgba(0,0,0,0.3);
 	width: 100%;
@@ -50,6 +50,7 @@ hr.line {
 }
 
 video {
+	background-color: #000;
 	width: 100%;
 	height: 100vh;
 	z-index: -99;
