@@ -183,40 +183,44 @@ export default function ApplyForm() {
 				style={{width: "2rem", height:"2rem"}}
 				onClick={() => changeStep(3)}>3</button>
 			</div>
-			<div className="d-flex justify-content-center h-75">
-				<div className={`w-75 ${step === 1 ? '':'d-none'}`} >
-					<StepOne name={name} setName={setName} sex={sex} setSex={setSex} xp={xp} setXP={setXP}
-							location={location} setLocation={setLocation} otherSex={otherSex} setOtherSex={setOtherSex}/>
-				</div>
-				<div className={`w-75 ${step === 2 ? '':'d-none'}`}>
-					<StepTwo goal={goal} setGoal={setGoal} typeGoal={goalType} setGoalType={setGoalType} otherGoal={otherGoal}
-							setOtherGoal={setOtherGoal}/>
-				</div>
-				<div className={`w-75 ${step === 3 ? '':'d-none'}`}>
-					<StepThree email={email} setEmail={setEmail} phoneNum={phoneNum} setPhoneNum={setPhoneNum} ready={ready} setReady={setReady}/>
-				</div>
-				<div className={`w-75 card text-center rounded-0 ${step === 4 ? '':'d-none'}`}>
-					<div className="text-capitalize card-header">Review your information</div>
-					<div className="card-body">
-						<p>Name: <i>{name}</i></p>
-						<p>Location: <i>{location}</i></p>
-						<p>Sex: <i>{sex === "Other" ? otherSex:sex}</i></p>
-						<p>Have you ever worked out?: <i>"{xp}"</i></p>
-						<hr/>
-						<p>Goal: <i>"{goal === "Other" ? otherGoal:goal}"</i></p>
-						<p><i>"{goalType}"</i></p>
-						<hr/>
-						<p>Email Address: <i>{email}</i></p>
-						<p>Phone Number: <i>{phoneNum}</i></p>
-						<p>Are you ready to start ASAP?: <i>"{ready}"</i></p>
-						<p className="form-text">If you need to go back and make changes, feel free to do so!</p>
-						<button type="button" onClick={() => changeStep(3)} className="mt-3 btn btn-dark float-start">Prev</button>
-						<button type="button" onClick={handleApplication} className="mt-3 btn btn-dark float-end">Submit Application</button>
+			<div className="col">
+				<div className="row justify-content-center">
+					<div className={`w-75 ${step === 1 ? '':'d-none'}`} >
+						<StepOne name={name} setName={setName} sex={sex} setSex={setSex} xp={xp} setXP={setXP}
+								location={location} setLocation={setLocation} otherSex={otherSex} setOtherSex={setOtherSex}/>
+					</div>
+					<div className={`w-75 ${step === 2 ? '':'d-none'}`}>
+						<StepTwo goal={goal} setGoal={setGoal} typeGoal={goalType} setGoalType={setGoalType} otherGoal={otherGoal}
+								setOtherGoal={setOtherGoal}/>
+					</div>
+					<div className={`w-75 ${step === 3 ? '':'d-none'}`}>
+						<StepThree email={email} setEmail={setEmail} phoneNum={phoneNum} setPhoneNum={setPhoneNum} ready={ready} setReady={setReady}/>
+					</div>
+					<div className={`w-75 card text-center rounded-0 ${step === 4 ? '':'d-none'}`}>
+						<div className="text-capitalize card-header">Review your information</div>
+						<div className="card-body">
+							<p>Name: <i>{name}</i></p>
+							<p>Location: <i>{location}</i></p>
+							<p>Sex: <i>{sex === "Other" ? otherSex:sex}</i></p>
+							<p>Have you ever worked out?: <i>"{xp}"</i></p>
+							<hr/>
+							<p>Goal: <i>"{goal === "Other" ? otherGoal:goal}"</i></p>
+							<p><i>"{goalType}"</i></p>
+							<hr/>
+							<p>Email Address: <i>{email}</i></p>
+							<p>Phone Number: <i>{phoneNum}</i></p>
+							<p>Are you ready to start ASAP?: <i>"{ready}"</i></p>
+							<p className="form-text">If you need to go back and make changes, feel free to do so!</p>
+							<button type="button" onClick={() => changeStep(3)} className="mt-3 btn btn-dark float-start">Prev</button>
+							<button type="button" onClick={handleApplication} className="mt-3 btn btn-dark float-end">Submit Application</button>
+						</div>
 					</div>
 				</div>
-				<div className="position-absolute" style={{bottom: "250px"}}>
-						<button type="button" onClick={() => changeStep(step-1)} className={`me-3 btn btn-dark float-start ${step === 1 || step === 4 ? 'd-none':''} `}>Prev</button>
-						<button type="button" onClick={() => changeStep(step+1, "next")} className={`btn btn-dark float-end ${step === 4 ? 'd-none':''}`}>Next</button>
+				<div className="row justify-content-center">
+					<div className="w-75">
+						<button type="button" onClick={() => changeStep(step-1)} className={`me-3 float-start btn btn-dark ${step === 1 || step === 4 ? 'd-none':''} `}>Prev</button>
+						<button type="button" onClick={() => changeStep(step+1, "next")} className={`btn float-end btn-dark ${step === 4 ? 'd-none':''}`}>Next</button>
+					</div>
 				</div>
 			</div>
 		</div>
