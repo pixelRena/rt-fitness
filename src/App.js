@@ -1,6 +1,5 @@
 import './App.css';
 import './App.scss';
-import './stylesheets/skeleton.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
