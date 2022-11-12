@@ -8,10 +8,8 @@ export default function NavBar() {
 	const navCollapse = (bool) => {
 		setIsOpen(bool);
 		if(bool){
-			console.log("opening");
 			nav.current.classList.remove("collapse");
 		} else {
-			console.log("closing");
 			nav.current.classList.add("collapse");
 		}
 	};
