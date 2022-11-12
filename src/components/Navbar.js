@@ -5,7 +5,7 @@ export default function NavBar() {
 		<nav className="navbar navbar-dark sticky-top text-white navbar-expand-lg bg-dark" style={{padding: "unset"}}>
 			<div className="container-fluid">
 				<Link className="navbar-brand" to="/">
-					<img src="logo.png" width="60"/>
+					<img src="logo.png" alt="RTFLOGO" width="60"/>
 				</Link>
 				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon"></span>
