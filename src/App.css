@@ -69,15 +69,19 @@ video {
 	margin-top: 150px;
 }
 
-.h-100vh {
-	height: 100vh;
-}
-
 .contact img {
 	height: 300px;
 	width: 300px;
 	border-radius: 10%;
 	object-fit: cover;
+}
+
+.navbar-nav {
+	overflow: hidden;
+}
+
+.nav-link {
+	border-bottom: 2px solid transparent;
 }
 
 .igQR {
@@ -92,11 +96,6 @@ video {
 a {
 	text-decoration: none !important;
 	color: #fff !important;
-}
-
-a:hover {
-	text-decoration: underline !important;
-	color: #c5c5c5 !important;
 }
 
 @media screen and (max-width: 768px){

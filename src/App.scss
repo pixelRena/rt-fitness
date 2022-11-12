@@ -27,6 +27,14 @@ button.btn-dark, {
 	color: $primary;
 }
 
+.nav-link:hover {
+	border-bottom: 2px solid $secondary;
+}
+
+.nav-link.active {
+	border-bottom: 2px solid $secondary;
+}
+
 .apply input:focus,
 .apply textarea:focus,
 .apply select:focus {

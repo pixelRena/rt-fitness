@@ -20,7 +20,7 @@ export default function Footer() {
 		    </section>
 		    <section>
 		    	<p>
-			    	<Link className="link-color">Privacy Policy</Link> | <Link className="link-color" to="/about">About RTF</Link>
+			    	<Link className="link-color">Privacy Policy</Link> | <Link className="link-color" to="/contact-me">Contact Me</Link>
 			    </p>
 		    </section>
 		  </div>

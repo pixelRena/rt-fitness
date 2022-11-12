@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useRef, useState } from 'react';
 
 export default function NavBar() {
@@ -26,16 +26,16 @@ export default function NavBar() {
 				<div className="collapse navbar-collapse" ref={nav} id="navbarSupportedContent">
 					<ul className="navbar-nav ms-auto">
 						<li className="nav-item">
-							<Link className="nav-link" to="/" onClick={() => navCollapse(false)}>Home</Link>
+							<NavLink className="nav-link" activeClassName="active" to="/" onClick={() => navCollapse(false)}>Home</NavLink>
 						</li>
 						<li className="nav-item">
-							<Link  className="nav-link" to="/programs" onClick={() => navCollapse(false)}>Programs</Link>
+							<NavLink  className="nav-link" activeClassName="active" to="/programs" onClick={() => navCollapse(false)}>Programs</NavLink>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link" to="/about" onClick={() => navCollapse(false)}>About</Link>
+							<NavLink className="nav-link" activeClassName="active" to="/apply-now" onClick={() => navCollapse(false)}>Apply</NavLink>
 						</li>
 						<li className="nav-item">
-							<Link as={Link} className="nav-link" to="/contact-me" onClick={() => navCollapse(false)}>Contact</Link>
+							<NavLink className="nav-link" activeClassName="active" to="/about" onClick={() => navCollapse(false)}>About</NavLink>
 						</li>
 					</ul>
 				</div>
