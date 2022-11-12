@@ -8,6 +8,7 @@ import LandingPage from './pages/LandingPage';
 import About from './pages/About';
 import ApplyForm from './pages/ApplyForm';
 import Confirmation from './pages/Confirmation';
+import Contact from './pages/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Route index element={<ApplyForm/>}/>
               <Route path="confirmation" element={<Confirmation/>}/>
             </Route>
+            <Route path="/contact-me" element={<Contact/>}/>
           </Routes>
         </div>
         <Footer/>

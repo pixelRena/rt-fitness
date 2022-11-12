@@ -6,7 +6,7 @@ body {
 }
 
 .app {
-	min-height: 100vh;
+	min-height: 130vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -64,6 +64,22 @@ video {
 	border-radius: 50%;
 	object-fit: cover;
 	box-shadow: 5px 5px 10px grey;
+}
+
+.contact img {
+	height: 300px;
+	width: 300px;
+	border-radius: 10%;
+	object-fit: cover;
+}
+
+.igQR {
+	box-shadow: 1px 5px 10px skyblue;
+}
+
+.tiktokQR {
+	object-position: 100% -135px;
+	box-shadow: 1px 5px 10px #f34b6c;
 }
 
 a {

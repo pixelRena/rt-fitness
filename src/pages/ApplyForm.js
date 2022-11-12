@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 //  Add button pos's for all devices
+// Enable step button clicks
 // Develop mail implementation
 const StepOne = ({setName,setLocation,setXP,setSex,name,location,sex,xp}) => {
 	return(
@@ -255,7 +256,7 @@ export default function ApplyForm() {
 				<div className={`w-75 ${step === 3 ? '':'d-none'}`}>
 					<StepThree email={email} setEmail={setEmail} phoneNum={phoneNum} setPhoneNum={setPhoneNum} ready={ready} setReady={setReady}/>
 				</div>
-				<div className={`w-75 card text-center ${step === 4 ? '':'d-none'}`}>
+				<div className={`w-75 card text-center rounded-0 ${step === 4 ? '':'d-none'}`}>
 					<div className="text-capitalize card-header">Review your information</div>
 					<div className="card-body">
 						<p>Name: <i>{name}</i></p>

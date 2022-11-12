@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-// Adjust video for mobile
+// Adjust video for mobile/zooming in
 export default function LandingPage(){
 	const [ muted, setMuted ] = useState(0);
 	const soundButton = useRef(null);

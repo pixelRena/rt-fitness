@@ -1,4 +1,5 @@
-//  Adjust mobile functionality
+//  Adjust mobile functionality (pexel)
+// center in middle
 export default function About() {
 	return(
 		<div className="mt-5 container">
