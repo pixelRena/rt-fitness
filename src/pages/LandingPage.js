@@ -21,7 +21,7 @@ export default function LandingPage(){
 	return(
 		<div>
 			<button type="button"
-					className="btn btn-dark btn-sound rounded-0 btn-sound bi-volume-mute"
+					className="btn btn-dark btn-sound btn-sound bi-volume-mute"
 					onClick={handleSound}
 					ref={soundButton}/>
 			<div className="overlay"></div>
@@ -31,7 +31,7 @@ export default function LandingPage(){
 				<h3>Premium Personal Training</h3>
 				<h5 className="fw-lighter">It's <em className="secondary-text">never</em> too late</h5>
 				<hr className="line mb-3"/>
-				<Link to="/apply-now"><button className="btn btn-dark btn-sm text-uppercase p-3 rounded-0">Apply Now</button></Link>
+				<Link to="/apply-now"><button className="btn btn-dark btn-sm text-uppercase p-3">Apply Now</button></Link>
 			</section>
 		</div>
 	);

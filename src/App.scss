@@ -3,6 +3,7 @@ $secondary: #f47308;
 $dark: #000;
 $light: #fff;
 $nav-color: rgb(23 26 29);
+$input-box-shadow: #f9b47b;
 
 nav.bg-dark {
 	background-color: $nav-color !important;
@@ -12,11 +13,36 @@ nav.bg-dark {
 	color: $secondary
 }
 
-button.btn-dark {
+.dark-text:hover {
+	color: $dark !important;
+}
+
+button.btn-dark, {
 	background-color: $secondary;
 	border-color: $secondary;
+	border-radius: 0;
 }
 
 .primary-text {
 	color: $primary;
 }
+
+.apply input:focus,
+.apply textarea:focus,
+.apply select:focus {
+	box-shadow: 1px 1px 10px 1px $input-box-shadow;
+	border-color: $secondary;
+}
+
+.apply input,
+.apply textarea,
+.apply select {
+	border-color: $secondary;
+	border-radius: 0;
+}
+
+.apply .form-check-input:checked {
+	background-color: $secondary;
+	border-color: $secondary;
+}
+

@@ -11,16 +11,16 @@ export default function Footer() {
 				Get in touch with me
 			</section>
 		    <section className="mb-3">
-		      <a className="btn btn-outline-light rounded-5 btn-floating m-1" href="https://www.instagram.com/rtfitness1_" target="_blank" role="button"
+		      <a className="btn dark-text btn-outline-light rounded-5 btn-floating m-1" href="https://www.instagram.com/rtfitness1_" target="_blank" role="button"
 		        ><i className="bi-instagram"></i
 		      ></a>
-		      <a className="btn btn-outline-light rounded-5 btn-floating m-1" href="https://www.tiktok.com/@1andonlyhope_" target="_blank" role="button"
+		      <a className="btn dark-text btn-outline-light rounded-5 btn-floating m-1" href="https://www.tiktok.com/@1andonlyhope_" target="_blank" role="button"
 		        ><i className="bi-tiktok"></i
 		      ></a>
 		    </section>
 		    <section>
 		    	<p>
-			    	<u role="button">Privacy Policy</u> | <Link className="link-color" to="/about"><u role="button">About RTF</u></Link>
+			    	<Link className="link-color">Privacy Policy</Link> | <Link className="link-color" to="/about">About RTF</Link>
 			    </p>
 		    </section>
 		  </div>

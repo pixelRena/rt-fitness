@@ -20,9 +20,20 @@ hr.line {
 	max-width: 15%;
 }
 
+.apply hr {
+	display:inline-block;
+	opacity: 1;
+	border-width: 1px;
+	width: 90%;
+}
+
 .hero {
 	margin-top: 200px;
 	margin-bottom: 270px;
+}
+
+.about {
+	margin-bottom: 200px;
 }
 
 .overlay {	
@@ -55,13 +66,13 @@ video {
 	box-shadow: 5px 5px 10px grey;
 }
 
-.link-color {
+a {
 	text-decoration: none !important;
-	color: #fff;
+	color: #fff !important;
 }
 
-.link-color:hover {
-	text-decoration: none !important;
+a:hover {
+	text-decoration: underline !important;
 	color: #c5c5c5 !important;
 }
 
