@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
 const aws = require("aws-sdk");
-const cors = require("cors");
 dotenv.config()
 
 const app = express()
@@ -13,7 +12,6 @@ const buildPath = path.join(__dirname, 'build')
 
 app.use(express.static(buildPath))
 app.use(express.json())
-app.use(cors())
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'))
@@ -29,7 +27,7 @@ app.post('/send-email', (req,res) => {
   function sesTest(){
     const params = {
       Destination: {
-        ToAddresses: [process.env.AD_EMAIL]
+        ToAddresses: ["sdean013199@gmail.com"]
       },
       Message: {
         Body: {
