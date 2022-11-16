@@ -166,7 +166,7 @@ export default function ApplyForm() {
 		} else {
 			progressVisibility.current.classList.remove("d-none");
 		}
-	},[])
+	},[changeStep])
 
 	return(
 		<div className="apply container mt-5 mb-5">
