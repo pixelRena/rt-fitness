@@ -14,11 +14,13 @@ const StepThree = ({setEmail, email, setPhoneNum, phoneNum, setReady, ready}) =>
 			<div className="mb-3">
 				<label id="label-ready" htmlFor="tel">Are you ready to start ASAP?</label>
 				<div className="form-check">
-					<input className="form-check-input" name="readytogo" type="radio" id="yes-select-ready" value="Yes" onClick={e => setReady(e.target.value)}/>
+					<input className="form-check-input" name="readytogo" type="radio" id="yes-select-ready" value="Yes" 
+					onClick={e => setReady(e.target.value)}/>
 					<label className="form-check-label" htmlFor="yes-select-ready">Yes</label>
 				</div>
 				<div className="form-check">
-					<input className="form-check-input" name="readytogo" type="radio" id="no-select-ready" value="No" onClick={e => setReady(e.target.value)}/>
+					<input className="form-check-input" name="readytogo" type="radio" id="no-select-ready" value="No" 
+					onClick={e => setReady(e.target.value)}/>
 					<label className="form-check-label" htmlFor="no-select-ready">No</label>
 				</div>
 			</div>

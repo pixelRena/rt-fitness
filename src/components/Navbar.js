@@ -26,16 +26,16 @@ export default function NavBar() {
 				<div className="collapse navbar-collapse" ref={nav} id="navbarSupportedContent">
 					<ul className="navbar-nav ms-auto">
 						<li className="nav-item">
-							<NavLink className="nav-link" activeClassName="active" to="/" onClick={() => navCollapse(false)}>Home</NavLink>
+							<NavLink className="nav-link" activeclassname="active" to="/" onClick={() => navCollapse(false)}>Home</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink  className="nav-link" activeClassName="active" to="/programs" onClick={() => navCollapse(false)}>Programs</NavLink>
+							<NavLink  className="nav-link" activeclassname="active" to="/programs" onClick={() => navCollapse(false)}>Programs</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" activeClassName="active" to="/apply-now" onClick={() => navCollapse(false)}>Apply</NavLink>
+							<NavLink className="nav-link" activeclassname="active" to="/apply-now" onClick={() => navCollapse(false)}>Apply</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" activeClassName="active" to="/about" onClick={() => navCollapse(false)}>About</NavLink>
+							<NavLink className="nav-link" activeclassname="active" to="/about" onClick={() => navCollapse(false)}>About</NavLink>
 						</li>
 					</ul>
 				</div>

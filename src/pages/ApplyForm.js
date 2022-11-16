@@ -4,9 +4,8 @@ import { toast } from 'react-toastify';
 import StepOne from '../components/StepOne';
 import StepTwo from '../components/StepTwo';
 import StepThree from '../components/StepThree';
+import axios from 'axios';
 
-//  Add button pos's for all devices
-// Develop mail implementation
 export default function ApplyForm() {
 	const navigate = useNavigate();
 	// First step
@@ -127,24 +126,30 @@ export default function ApplyForm() {
 		}
 	};
 
-	const handleApplication = (e) => {
-		e.preventDefault();
-		toast.success("Application sent!");
-		navigate('/apply-now/confirmation', {
-			state: {
-				name: name
-			}
-		});
-		console.log({
-			name: name,
-			email: email,
-			phone: phoneNum,
-			location: location,
-			sex: sex === "Other" ? otherSex:sex,
-			experience: xp,
-			goals: (goal === "Other" ? otherGoal:goal)+" "+goalType,
-			"are they ready?": ready,
-		});
+	const handleApplication = async (e) => {
+		try {
+			e.preventDefault();
+			const formData = {
+				name: name,
+				email: email,
+				phone: phoneNum,
+				location: location,
+				sex: sex === "Other" ? otherSex:sex,
+				experience: xp,
+				goals: (goal === "Other" ? otherGoal:goal)+" "+goalType,
+				ready: ready,
+			};	
+			const send = await axios.post('/send-email', formData);
+
+			toast.success("Application sent!");
+			navigate('/apply-now/confirmation', {
+				state: {
+					name: name
+				}
+			});
+		} catch(e) {
+			alert('error');
+		}
 	};
 
 	useEffect(() => {
@@ -161,7 +166,7 @@ export default function ApplyForm() {
 		} else {
 			progressVisibility.current.classList.remove("d-none");
 		}
-	},[changeStep])
+	},[])
 
 	return(
 		<div className="apply container mt-5 mb-5">
@@ -184,7 +189,7 @@ export default function ApplyForm() {
 				onClick={() => changeStep(3)}>3</button>
 			</div>
 			<div className="col">
-				<div className="row justify-content-center">
+				<div className="d-flex justify-content-center">
 					<div className={`w-75 ${step === 1 ? '':'d-none'}`} >
 						<StepOne name={name} setName={setName} sex={sex} setSex={setSex} xp={xp} setXP={setXP}
 								location={location} setLocation={setLocation} otherSex={otherSex} setOtherSex={setOtherSex}/>
