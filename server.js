@@ -27,7 +27,7 @@ app.post('/send-email', (req,res) => {
   function sesTest(){
     const params = {
       Destination: {
-        ToAddresses: [process.env.AD_EMAIL]
+        ToAddresses: ["redemptiontemplefitness@gmail.com"]
       },
       Message: {
         Body: {
