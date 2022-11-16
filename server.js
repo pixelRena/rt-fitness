@@ -27,7 +27,7 @@ app.post('/send-email', (req,res) => {
   function sesTest(){
     const params = {
       Destination: {
-        ToAddresses: [""]
+        ToAddresses: [`${process.env.AD_EMAIL}`]
       },
       Message: {
         Body: {
@@ -120,7 +120,7 @@ app.post('/send-email', (req,res) => {
           Data: "You have a new application!"
         }
       },
-      Source: ""
+      Source: `${process.env.AD_EMAIL}`
     };
     return ses.sendEmail(params).promise();
   }
