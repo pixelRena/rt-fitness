@@ -12,6 +12,7 @@ const buildPath = path.join(__dirname, 'build')
 
 app.use(express.static(buildPath))
 app.use(express.json())
+app.use(express.urlencoded({extended: true}));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'))
@@ -27,7 +28,7 @@ app.post('/send-email', (req,res) => {
   function sesTest(){
     const params = {
       Destination: {
-        ToAddresses: ["redemptiontemplefitness@gmail.com"]
+        ToAddresses: [process.env.AD_EMAIL]
       },
       Message: {
         Body: {
