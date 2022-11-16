@@ -12,8 +12,8 @@ export default function Contact() {
 					<p className="text-wrap text-white p-4 fs-6">The best way to contact me would be through my social platforms. Use the QR to scan and find me or you can click on the icons below to get sent directly to my page.</p>
 					</div>
 					<div className="text-center">
-						<a href="instagram.com/rtfitness1_" className="me-2"><i className="btn btn-outline-light bi-instagram rounded-5 fs-4"/></a>
-						<a href="tiktok.com/@1andonlyhope_"><i className="btn btn-outline-light bi-tiktok rounded-5 fs-4"/></a>
+						<a href="https://www.instagram.com/rtfitness1_" className="me-2"><i className="btn btn-outline-light bi-instagram rounded-5 fs-4"/></a>
+						<a href="https://www.tiktok.com/@1andonlyhope_"><i className="btn btn-outline-light bi-tiktok rounded-5 fs-4"/></a>
 					</div>
 				</div>
 				<div className="d-flex justify-content-center">
