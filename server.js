@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv');
 const aws = require("aws-sdk");
+const cors = require("cors");
 dotenv.config()
 
 const app = express()
@@ -12,7 +13,7 @@ const buildPath = path.join(__dirname, 'build')
 
 app.use(express.static(buildPath))
 app.use(express.json())
-app.use(express.urlencoded({extended: true}));
+app.use(cors())
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'))
