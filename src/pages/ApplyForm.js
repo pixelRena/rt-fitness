@@ -139,7 +139,7 @@ export default function ApplyForm() {
 				goals: (goal === "Other" ? otherGoal:goal)+" "+goalType,
 				ready: ready,
 			};	
-			const send = await axios.post('/send-email', formData);
+			const send = await axios.post('https://rtf-prototype.onrender.com/send-email', formData);
 
 			toast.success("Application sent!");
 			navigate('/apply-now/confirmation', {
