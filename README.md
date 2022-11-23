@@ -18,6 +18,7 @@
 * [![React][React.js]][React-url]
 * [![Sass][sass]][sass-url]
 * [![AWS ses][aws]][aws-url]
+* [![Bootstrap][Bootstrap]][Bootstrap-url]
 
 
 ## Contact
@@ -33,3 +34,5 @@ Project Link: [https://github.com/pixelRena/rt-fitness](https://github.com/pixel
 [sass-url]: https://sass-lang.com/
 [aws]: https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white
 [aws-url]: https://aws.amazon.com/ses/
+[Bootstrap]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
