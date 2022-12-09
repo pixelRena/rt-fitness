@@ -8,7 +8,12 @@ export default function About() {
 				<div className="col-lg-7 col-sm-4 col-md-12 col-12">
 					<h1 className="text-center text-capitalize mt-5">Meet your trainer</h1>
 					<hr className="line secondary-text"/>
-					<p className="text-wrap mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis maximus mauris, non vulputate lectus. Integer fringilla rutrum accumsan. Phasellus et est non mi ultrices egestas ac a ligula. In vel porttitor ante, a consectetur tellus. Duis tristique ligula in mi tempus molestie. Sed placerat ex nunc, id vestibulum ante tristique non. Nam eros magna, auctor sed porttitor sed, interdum id nunc. Donec vulputate, quam eu tempor sagittis, sem est auctor odio, ut dapibus justo magna vel risus. Fusce molestie cursus cursus. Donec quis elit at mauris ultricies vulputate. Nam vitae magna erat. Aliquam sodales sem nec sem sagittis, at aliquam mi laoreet. Maecenas venenatis erat ut velit facilisis dapibus.</p>
+					<p className="text-wrap mt-3">My Name is Hope Osedo and I am the CEO of Redemption Temple Fitness. I’m so excited that you’re taking the next steps towards your health and fitness journey! I was raised in Memphis, Tennessee and I started my fitness journey around January 2019. Before I started working out, I didn’t know what it meant to love yourself and to take care your body. I stumbled across the 1 Corinthians 6:19 and that verse changed my life on how I should take care of my body. My body is a temple that God created to give Him honor and I wanna pass that passion and knowledge to others. My mission is YOU! I’m looking forward to seeing what God will do to you and through you as we walk together in this journey together!
+					<br/><br/>
+					<strong>1 Corinthians 6:19-20 TPT</strong>
+					<br/>
+					Your body is now the sacred temple of the Spirit of Holiness, who lives in you. You don’t belong to yourself any longer, for the gift of God, the Holy Spirit, lives inside your sanctuary. You were God’s expensive purchase, paid for with tears of blood, so by all means, then, use your body to bring glory to God!
+					</p>
 				</div>
 			</div>
 		</div>
