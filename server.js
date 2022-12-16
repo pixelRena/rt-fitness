@@ -120,7 +120,7 @@ app.post('/send-email', (req,res) => {
           Data: "You have a new application!"
         }
       },
-      Source: "sdean013199@gmail.com"
+      Source: process.env.AD_EMAIL
     };
     return ses.sendEmail(params).promise();
   }
