@@ -6,7 +6,7 @@ dotenv.config()
 
 const app = express()
 const port = process.env.PORT || 3000
-const ses = new aws.SES({region:"us-east-1"})
+const ses = new aws.SES({region: process.env.AWS_REGION})
 
 const buildPath = path.join(__dirname, 'build')
 

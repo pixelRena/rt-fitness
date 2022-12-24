@@ -6,9 +6,9 @@ export default function Contact() {
 	return(
 		<div className="contact container w-75 mt-5 mb-5">
 			<div className="row">
-				<div className="row mb-3 bg-dark p-5 rounded-3">
+				<div className="row mb-3 bg-dark p-3 rounded-3">
 					<div className="col text-center">
-					<h1 className="text-capitalize text-white">How to reach out</h1>
+					<h2 className="text-capitalize text-white mt-2">How to reach out</h2>
 					<p className="text-wrap text-white p-4 fs-6">The best way to contact me would be through my social platforms. Use the QR to scan and find me or you can click on the icons below to get sent directly to my page.</p>
 					</div>
 					<div className="text-center">
