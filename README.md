@@ -7,7 +7,7 @@
   <p align="center">
     Redemption Temple Fitness application for clients and new users looking for a personal trainer to shape their goals for the year can apply for a quote and learn more about the programs offered by Hope himself.
     <br />
-    <a href="https://rtf-prototype.onrender.com/">View Demo</a>
+    <a href="https://redemptiontemplefitness.herokuapp.com/">View Demo</a>
     ·
     <a href="https://github.com/pixelRena/rt-fitness/issues">Report Bug</a>
   </p>
