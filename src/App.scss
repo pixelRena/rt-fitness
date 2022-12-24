@@ -5,8 +5,12 @@ $light: #fff;
 $nav-color: rgb(23 26 29);
 $input-box-shadow: #f9b47b;
 
-nav.bg-dark {
-	background-color: $nav-color !important;
+nav {
+	.bg-dark { background-color: $nav-color; }
+	.nav-link {
+		&:hover { border-bottom: 2px solid $secondary; }
+		& .active { border-bottom: 2px solid $secondary; }
+	}
 }
 
 .secondary-text {
@@ -17,40 +21,32 @@ nav.bg-dark {
 	color: $dark !important;
 }
 
-button.btn-dark, {
-	background-color: $secondary;
-	border-color: $secondary;
-	border-radius: 0;
+button {
+	&.btn-dark {
+		background-color: $secondary;
+		border-color: $secondary;
+		border-radius: 0;
+	}
 }
 
 .primary-text {
 	color: $primary;
 }
 
-.nav-link:hover {
-	border-bottom: 2px solid $secondary;
-}
+.apply {
+	input, textarea, select {
+		border-color: $secondary;
+		border-radius: 0;
+		&:focus { 
+			box-shadow: 1px 1px 10px 1px $input-box-shadow;
+			border-color: $secondary; 
+		}
+	}
 
-.nav-link.active {
-	border-bottom: 2px solid $secondary;
+	.form-check-input {
+		&:checked {
+			background-color: $secondary;
+			border-color: $secondary;
+		}
+	}
 }
-
-.apply input:focus,
-.apply textarea:focus,
-.apply select:focus {
-	box-shadow: 1px 1px 10px 1px $input-box-shadow;
-	border-color: $secondary;
-}
-
-.apply input,
-.apply textarea,
-.apply select {
-	border-color: $secondary;
-	border-radius: 0;
-}
-
-.apply .form-check-input:checked {
-	background-color: $secondary;
-	border-color: $secondary;
-}
-
