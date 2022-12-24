@@ -74,7 +74,7 @@ video {
 }
 
 .about {
-	margin-top: 150px;
+	margin-top: 50px;
 }
 
 .contact img {
@@ -112,7 +112,7 @@ a {
 		margin-top: 100px;
 	}
 	.about {
-		margin-top:200px;
+		margin-top: 200px;
 	}
 	.about div:nth-child(2) {
 		margin-top: 40px;

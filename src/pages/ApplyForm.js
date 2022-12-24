@@ -6,22 +6,26 @@ import StepTwo from '../components/StepTwo';
 import StepThree from '../components/StepThree';
 import axios from 'axios';
 
+const defaultFormFields = {
+	name: '',
+	location: 'test',
+	sex: '',
+	otherSex: '',
+	xp: '',
+	goal: '',
+	otherGoal: '',
+	goalType: '',
+	email: '',
+	phoneNum: '',
+	ready: ''
+};
+
 export default function ApplyForm() {
 	const navigate = useNavigate();
-	// First step
-	const [ name, setName ] = useState("");
-	const [ location, setLocation ] = useState("");
-	const [ sex, setSex ] = useState("");
-	const [ otherSex, setOtherSex ] = useState("");
-	const [ xp, setXP ] = useState("");
-	// Second step
-	const [ goal, setGoal ] = useState("");
-	const [ otherGoal, setOtherGoal ] = useState("");
-	const [ goalType, setGoalType ] = useState("");
-	// Step three
-	const [ email, setEmail ] = useState("");
-	const [ phoneNum, setPhoneNum ] = useState("");
-	const [ ready, setReady ] = useState("");
+
+	const [ formFields, setFormFields ] = useState(defaultFormFields);
+	const { name, location, sex, otherSex, xp, goal, otherGoal, goalType, email, phoneNum, ready } = formFields;
+
 	// current step
 	const [ step, setStep ] = useState(1);
 
@@ -126,6 +130,13 @@ export default function ApplyForm() {
 		}
 	};
 
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+
+		setFormFields({...formFields, [name]: value});
+		console.log(formFields);
+	};
+	
 	const handleApplication = async (e) => {
 		try {
 			e.preventDefault();
@@ -139,9 +150,10 @@ export default function ApplyForm() {
 				goals: (goal === "Other" ? otherGoal:goal)+" "+goalType,
 				ready: ready,
 			};	
-			const send = await axios.post('https://rtf-prototype.onrender.com/send-email', formData);
+			const send = await axios.post('https://redemptiontemplefitness.herokuapp.com/send-email', formData);
 
 			toast.success("Application sent!");
+			setFormFields(defaultFormFields);
 			navigate('/apply-now/confirmation', {
 				state: {
 					name: name
@@ -170,7 +182,7 @@ export default function ApplyForm() {
 
 	return(
 		<div className="apply container mt-5 mb-5">
-			<h1 className="text-uppercase text-center">Application Form</h1>
+			<h1 className="text-capitalize text-center">Application Form</h1>
 			<div className="position-relative m-4" ref={progressVisibility}>
 				<div className="progress" style={{"height": "1px"}}>
 				<div className="progress-bar" role="progressbar" ref={progressState} style={{"backgroundColor":"#f47308", "width": "50%"}} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -189,17 +201,15 @@ export default function ApplyForm() {
 				onClick={() => changeStep(3)}>3</button>
 			</div>
 			<div className="col">
-				<div className="d-flex justify-content-center">
+				<form className="d-flex justify-content-center" onSubmit={handleApplication}>
 					<div className={`w-75 ${step === 1 ? '':'d-none'}`} >
-						<StepOne name={name} setName={setName} sex={sex} setSex={setSex} xp={xp} setXP={setXP}
-								location={location} setLocation={setLocation} otherSex={otherSex} setOtherSex={setOtherSex}/>
+						<StepOne handleChange={handleChange}/>
 					</div>
 					<div className={`w-75 ${step === 2 ? '':'d-none'}`}>
-						<StepTwo goal={goal} setGoal={setGoal} typeGoal={goalType} setGoalType={setGoalType} otherGoal={otherGoal}
-								setOtherGoal={setOtherGoal}/>
+						<StepTwo handleChange={handleChange}/>
 					</div>
 					<div className={`w-75 ${step === 3 ? '':'d-none'}`}>
-						<StepThree email={email} setEmail={setEmail} phoneNum={phoneNum} setPhoneNum={setPhoneNum} ready={ready} setReady={setReady}/>
+						<StepThree handleChange={handleChange}/>
 					</div>
 					<div className={`w-75 card text-center rounded-0 ${step === 4 ? '':'d-none'}`}>
 						<div className="text-capitalize card-header">Review your information</div>
@@ -217,10 +227,10 @@ export default function ApplyForm() {
 							<p>Are you ready to start ASAP?: <i>"{ready}"</i></p>
 							<p className="form-text">If you need to go back and make changes, feel free to do so!</p>
 							<button type="button" onClick={() => changeStep(3)} className="mt-3 btn btn-dark float-start">Prev</button>
-							<button type="button" onClick={handleApplication} className="mt-3 btn btn-dark float-end">Submit Application</button>
+							<button type="submit" className="mt-3 btn btn-dark float-end">Submit Application</button>
 						</div>
 					</div>
-				</div>
+				</form>
 				<div className="row justify-content-center">
 					<div className="w-75">
 						<button type="button" onClick={() => changeStep(step-1)} className={`me-3 float-start btn btn-dark ${step === 1 || step === 4 ? 'd-none':''} `}>Prev</button>
