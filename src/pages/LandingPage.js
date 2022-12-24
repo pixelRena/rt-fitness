@@ -26,11 +26,11 @@ export default function LandingPage(){
 			<div className="overlay"></div>
 			<video className="position-fixed start-0 top-0" autoPlay playsInline loop muted={muted === 0} src="/videos/RTF_Intro.mov" type="video/mp4"/>
 			<section className="hero text-uppercase text-white text-center p-3">
-				<h1 className="fw-bolder">Introducing <span className="secondary-text">Redemption Temple Fitness</span></h1>
+				<h1>Introducing <span className="secondary-text">Redemption Temple Fitness</span></h1>
 				<h3>Premium Personal Training</h3>
-				<h5 className="fw-lighter">It's <em className="secondary-text">never</em> too late</h5>
+				<h4 className="fw-lighter">It's <em className="secondary-text">never </em> too late</h4>
 				<hr className="line mb-3"/>
-				<Link to="/apply-now"><button className="btn btn-dark btn-sm text-uppercase p-3">Apply Now</button></Link>
+				<Link to="/apply-now"><button className="btn btn-dark fs-6 btn-sm text-uppercase pe-3 ps-3 pt-2 pb-2">Apply Now</button></Link>
 			</section>
 		</div>
 	);

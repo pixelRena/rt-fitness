@@ -41,7 +41,7 @@ nav {
 	.nav-link {
 		border-bottom: 2px solid transparent;
 		&:hover { border-bottom: 2px solid $secondary; }
-		& .active { border-bottom: 2px solid $secondary; }
+		&.active { border-bottom: 2px solid $secondary; }
 	}
 	.navbar-nav { overflow: hidden; }
 }
@@ -87,7 +87,7 @@ button {
 		}
 	}
 
-	& hr {
+	hr {
 		display: inline-block;
 		opacity: 1;
 		border-width: 1px;
@@ -97,9 +97,9 @@ button {
 
 .about {
 	margin-top: 50px;
-	margin-bottom: 200px;
+	margin-bottom: 90px;
 
-	& div:first-child img {
+	div:first-child img {
 		height: 300px;
 		width: 300px;
 		border-radius: 50%;
@@ -114,6 +114,8 @@ video {
 	height: 100vh;
 	z-index: -99;
 }
+
+.link-color:hover { text-decoration: underline !important; }
 
 .overlay {
 	position: fixed;
