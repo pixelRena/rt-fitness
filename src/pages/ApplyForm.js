@@ -27,7 +27,7 @@ export default function ApplyForm() {
 	const { name, location, sex, otherSex, xp, goal, otherGoal, goalType, email, phoneNum, ready } = formFields;
 
 	// current step
-	const [ step, setStep ] = useState(1);
+	const [ step, setStep ] = useState(4);
 
 	// Check if user can go to next steps by clicking on progressbar
 	const [ validateOne, setValidateOne ] = useState(0);

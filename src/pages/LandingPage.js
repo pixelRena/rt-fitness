@@ -24,7 +24,6 @@ export default function LandingPage(){
 					onClick={handleSound}
 					ref={soundButton}/>
 			<div className="overlay"></div>
-			<div className="video-container"></div>
 			<video className="position-fixed start-0 top-0" autoPlay playsInline loop muted={muted === 0} src="/videos/RTF_Intro.mov" type="video/mp4"/>
 			<section className="hero text-uppercase text-white text-center p-3">
 				<h1 className="fw-bolder">Introducing <span className="secondary-text">Redemption Temple Fitness</span></h1>
