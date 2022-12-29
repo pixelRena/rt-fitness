@@ -134,10 +134,6 @@ video {
 		margin-bottom: 100px;
 		margin-top: 100px;
 	}
-	.about {
-		margin-top: 200px;
-		& div:nth-child(2) { margin-top: 40px; }
-	}
 }
 
 @media screen and (max-width: 320px) {
